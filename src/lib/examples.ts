@@ -1,4 +1,10 @@
 import { PromptExample, PromptCategory } from '@/types';
+import { PromptScorer } from './prompt-scorer';
+
+// Function to get real-time scores from PromptScorer
+const getPromptScore = (prompt: string): number => {
+  return PromptScorer.analyzePrompt(prompt).score;
+};
 
 export const PROMPT_EXAMPLES: PromptExample[] = [
   {
@@ -13,7 +19,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'Missing context or constraints',
         'No specific requirements'
       ],
-      score: 25
+      get score() { return getPromptScore(this.prompt); }
     },
     goodExample: {
       prompt: 'Write a 500-word science fiction short story for young adults about a teenager who discovers they can communicate with AI systems. The story should explore themes of technology and human connection, written in first person with a hopeful tone.',
@@ -25,7 +31,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'Theme specified',
         'Point of view and tone defined'
       ],
-      score: 92
+      get score() { return getPromptScore(this.prompt); }
     },
     explanation: 'The improved prompt provides clear constraints, target audience, theme, and specific requirements that guide the AI toward producing exactly what you want.',
     tips: [
@@ -48,7 +54,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'No coding standards or style preferences',
         'No error handling requirements mentioned'
       ],
-      score: 20
+      get score() { return getPromptScore(this.prompt); }
     },
     goodExample: {
       prompt: 'Create a JavaScript function called validateEmail that takes a string parameter and returns true if it\'s a valid email format, false otherwise. Use modern ES6+ syntax, include JSDoc comments, and add basic error handling for null/undefined inputs. The function should work in both browser and Node.js environments.',
@@ -60,7 +66,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'Error handling specified',
         'Environment compatibility noted'
       ],
-      score: 95
+      get score() { return getPromptScore(this.prompt); }
     },
     explanation: 'Technical prompts need precise specifications about functionality, coding standards, documentation, and edge cases.',
     tips: [
@@ -83,7 +89,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'No format requirements',
         'Vague and unhelpful'
       ],
-      score: 15
+      get score() { return getPromptScore(this.prompt); }
     },
     goodExample: {
       prompt: 'Compare React and Vue.js frameworks for building modern web applications. Focus on learning curve, performance, ecosystem, and community support. Present the analysis in a structured format with pros/cons for each framework and conclude with recommendations for different use cases. Target audience: intermediate developers considering framework migration.',
@@ -94,7 +100,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'Target audience specified',
         'Actionable conclusion requested'
       ],
-      score: 88
+      get score() { return getPromptScore(this.prompt); }
     },
     explanation: 'Analytical prompts should specify exactly what to compare, the criteria for comparison, and how to present the results.',
     tips: [
@@ -117,7 +123,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'No format preferences',
         'Too broad and unfocused'
       ],
-      score: 22
+      get score() { return getPromptScore(this.prompt); }
     },
     goodExample: {
       prompt: 'Create a beginner-friendly tutorial on setting up a Node.js development environment on macOS. Include step-by-step instructions with terminal commands, troubleshooting common issues, and verification steps to confirm successful installation. Format as numbered steps with code blocks and include estimated time to complete (aim for 15-20 minutes).',
@@ -129,7 +135,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'Troubleshooting included',
         'Time estimate provided'
       ],
-      score: 93
+      get score() { return getPromptScore(this.prompt); }
     },
     explanation: 'Instructional prompts need to specify the topic, audience skill level, format, and additional helpful elements like troubleshooting.',
     tips: [
@@ -152,7 +158,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'No desired tone or style',
         'Completely open-ended'
       ],
-      score: 18
+      get score() { return getPromptScore(this.prompt); }
     },
     goodExample: {
       prompt: 'I\'m a marketing professional looking to understand AI tools for content creation. I\'d like to have a friendly, informative conversation about practical applications, potential challenges, and recommendations for getting started. Please ask clarifying questions about my specific needs and experience level.',
@@ -163,7 +169,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'Clear objective stated',
         'Interactive element requested'
       ],
-      score: 85
+      get score() { return getPromptScore(this.prompt); }
     },
     explanation: 'Good conversational prompts provide context about yourself, the topic you want to discuss, and the style of interaction you prefer.',
     tips: [
@@ -186,7 +192,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'No environment information',
         'No attempted solutions mentioned'
       ],
-      score: 12
+      get score() { return getPromptScore(this.prompt); }
     },
     goodExample: {
       prompt: 'I\'m getting a "Cannot read property \'length\' of undefined" error in my React component when mapping over an array from an API call. The component renders before the data loads. Here\'s the relevant code: [code snippet]. I\'m using React 18 with hooks. I\'ve tried adding a loading state but the error persists. Please explain why this happens and provide 2-3 different solutions with their trade-offs.',
@@ -197,7 +203,7 @@ export const PROMPT_EXAMPLES: PromptExample[] = [
         'Attempted solutions mentioned',
         'Multiple solution options requested'
       ],
-      score: 91
+      get score() { return getPromptScore(this.prompt); }
     },
     explanation: 'Technical problem-solving prompts need complete context: the error, code, environment, and what you\'ve already tried.',
     tips: [
