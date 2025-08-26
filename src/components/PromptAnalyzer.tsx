@@ -134,7 +134,7 @@ export default function PromptAnalyzer({ onAnalysisComplete, initialPrompt }: Pr
       )}
 
       {/* Prompt Input */}
-      <div className="glass rounded-xl p-6 space-y-4">
+      <div className="glass rounded-xl space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold text-white">Analyze Your Prompt</h2>
           <div className="text-sm text-gray-400">
@@ -182,7 +182,7 @@ export default function PromptAnalyzer({ onAnalysisComplete, initialPrompt }: Pr
       {analysis && (
         <div className="space-y-6">
           {/* Overall Score */}
-          <div className="glass rounded-xl p-6">
+          <div className="glass rounded-xl ">
             <div className="text-center space-y-4">
               <h3 className="text-xl font-semibold text-white">Overall Score</h3>
               
@@ -236,9 +236,9 @@ export default function PromptAnalyzer({ onAnalysisComplete, initialPrompt }: Pr
           </div>
 
           {/* Detailed Feedback */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 ga">
             {/* Feedback Scores */}
-            <div className="glass rounded-xl p-6 space-y-4">
+            <div className="glass rounded-xl  space-y-4">
               <h4 className="text-lg font-semibold text-white mb-4">Detailed Breakdown</h4>
               
               {Object.entries(analysis.feedback).map(([key, value]) => (
@@ -258,7 +258,7 @@ export default function PromptAnalyzer({ onAnalysisComplete, initialPrompt }: Pr
             </div>
 
             {/* Token Information */}
-            <div className="glass rounded-xl p-6 space-y-4">
+            <div className="glass rounded-xl  space-y-4">
               <h4 className="text-lg font-semibold text-white mb-4">Token Analysis</h4>
               
               <div className="space-y-3">
@@ -297,7 +297,7 @@ export default function PromptAnalyzer({ onAnalysisComplete, initialPrompt }: Pr
 
           {/* Suggestions */}
           {analysis.suggestions.length > 0 && (
-            <div className="glass rounded-xl p-6">
+            <div className="glass rounded-xl ">
               <h4 className="text-lg font-semibold text-white mb-4">💡 Suggestions for Improvement</h4>
               
               <div className="space-y-3">

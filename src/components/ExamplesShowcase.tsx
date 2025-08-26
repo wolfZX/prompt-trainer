@@ -53,7 +53,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
       </div>
 
       {/* Category Filter */}
-      <div className="glass rounded-xl p-6">
+      <div className="glass rounded-xl ">
         <div className="flex flex-wrap gap-2 justify-center">
           {categories.map((category) => (
             <button
@@ -73,9 +73,9 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
       </div>
 
       {/* Examples Grid */}
-      <div className="grid lg:grid-cols-2 gap-6">
+      <div className="grid lg:grid-cols-2 ga">
         {filteredExamples.map((example) => (
-          <div key={example.id} className="glass rounded-xl p-6 space-y-6 card-hover">
+          <div key={example.id} className="glass rounded-xl  space-y-6 card-hover">
             {/* Example Header */}
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold text-white">{example.title}</h3>
@@ -203,7 +203,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
       {/* Detailed Example Modal */}
       {selectedExample && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="glass-dark rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6">
+          <div className="glass-dark rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto ">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-2xl font-bold text-white">{selectedExample.title}</h3>
               <button
@@ -218,7 +218,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
 
             {/* Same content as card but with more space */}
             <div className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 ga">
                 {/* Poor Example Detail */}
                 <div className="border border-red-500/30 rounded-lg overflow-hidden">
                   <div className="bg-red-500/10 px-4 py-3">
@@ -283,7 +283,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
               </div>
 
               {/* Full Explanation */}
-              <div className="glass rounded-lg p-6 space-y-4">
+              <div className="glass rounded-lg  space-y-4">
                 <h5 className="text-xl font-semibold text-white">💡 Detailed Explanation</h5>
                 <p className="text-gray-300 leading-relaxed">
                   {selectedExample.explanation}

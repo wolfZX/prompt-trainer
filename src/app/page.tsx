@@ -53,7 +53,7 @@ export default function Home() {
     return (
       <div className="min-h-screen flex flex-col">
         {/* Hero Section */}
-        <header className="flex-1 flex items-center justify-center px-4 py-8">
+        <header className="flex-1 flex items-center justify-center p-4 py-8">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Main Title */}
             <div className="space-y-4">
@@ -67,20 +67,20 @@ export default function Home() {
             </div>
 
             {/* Features Grid */}
-            <div className="grid md:grid-cols-3 gap-6 mt-12">
-              <div className="glass rounded-xl p-6 card-hover">
+            <div className="grid md:grid-cols-3 ga mt-12">
+              <div className="glass rounded-xl  card-hover">
                 <div className="text-3xl mb-4">📊</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Real-time Analysis</h3>
                 <p className="text-gray-400">Get instant feedback on your prompts with detailed scoring and suggestions</p>
               </div>
               
-              <div className="glass rounded-xl p-6 card-hover">
+              <div className="glass rounded-xl  card-hover">
                 <div className="text-3xl mb-4">🏆</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Gamification</h3>
                 <p className="text-gray-400">Unlock achievements, track progress, and level up your AI skills</p>
               </div>
               
-              <div className="glass rounded-xl p-6 card-hover">
+              <div className="glass rounded-xl  card-hover">
                 <div className="text-3xl mb-4">📚</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Learn by Example</h3>
                 <p className="text-gray-400">Study before/after examples to understand what makes great prompts</p>
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
 
             {/* Quick Preview */}
-            <div className="mt-16 glass rounded-xl p-6 text-left max-w-2xl mx-auto">
+            <div className="mt-16 glass rounded-xl  text-left max-w-2xl mx-auto">
               <h4 className="text-lg font-semibold text-white mb-4">Try a sample analysis:</h4>
               <div className="bg-muted/50 rounded-lg p-4 mb-4 font-mono text-sm text-gray-300">
                 &ldquo;Write something about AI&rdquo;
@@ -240,26 +240,26 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-white text-center">📊 Your Progress</h2>
               
               {stats && (
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="glass rounded-xl p-6 text-center">
+                <div className="grid md:grid-cols-4 ga">
+                  <div className="glass rounded-xl  text-center">
                     <div className="text-3xl mb-2">🏆</div>
                     <div className="text-2xl font-bold text-secondary">{stats.level}</div>
                     <div className="text-gray-400">Level</div>
                   </div>
                   
-                  <div className="glass rounded-xl p-6 text-center">
+                  <div className="glass rounded-xl  text-center">
                     <div className="text-3xl mb-2">⚡</div>
                     <div className="text-2xl font-bold text-primary">{stats.xp}</div>
                     <div className="text-gray-400">Total XP</div>
                   </div>
                   
-                  <div className="glass rounded-xl p-6 text-center">
+                  <div className="glass rounded-xl  text-center">
                     <div className="text-3xl mb-2">📝</div>
                     <div className="text-2xl font-bold text-blue-400">{stats.promptsAnalyzed}</div>
                     <div className="text-gray-400">Prompts Analyzed</div>
                   </div>
                   
-                  <div className="glass rounded-xl p-6 text-center">
+                  <div className="glass rounded-xl  text-center">
                     <div className="text-3xl mb-2">🎖️</div>
                     <div className="text-2xl font-bold text-yellow-400">{stats.achievements}</div>
                     <div className="text-gray-400">Achievements</div>
@@ -268,7 +268,7 @@ export default function Home() {
               )}
 
               {'isGuest' in user && (
-                <div className="glass rounded-xl p-6 text-center">
+                <div className="glass rounded-xl  text-center">
                   <h3 className="text-xl font-semibold text-white mb-4">Unlock Your Full Potential</h3>
                   <p className="text-gray-400 mb-6">
                     Create an account to save your progress, unlock achievements, and track your improvement over time.

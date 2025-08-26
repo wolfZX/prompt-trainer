@@ -76,7 +76,7 @@ export default function AuthPage() {
         </div>
 
         {/* Auth Form */}
-        <div className="glass rounded-xl p-8">
+        <div className="glass rounded-xl ">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
               <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
@@ -198,7 +198,7 @@ export default function AuthPage() {
         </div>
 
         {/* Features Reminder */}
-        <div className="glass rounded-xl p-6">
+        <div className="glass rounded-xl ">
           <h3 className="text-lg font-semibold text-white mb-4 text-center">
             🚀 Unlock with Account
           </h3>
