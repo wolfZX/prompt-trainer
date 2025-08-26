@@ -39,15 +39,15 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
+    "Liberation Mono", Menlo, monospace;
   --border-radius: 0.5rem;
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html,
@@ -68,10 +68,21 @@ body {
 
 /* Global background with warm gradient overlay */
 .gradient-bg {
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(247, 147, 30, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(255, 140, 66, 0.10) 0%, transparent 50%),
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 107, 53, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(247, 147, 30, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 80%,
+      rgba(255, 140, 66, 0.1) 0%,
+      transparent 50%
+    ),
     #000000;
 }
 
@@ -101,7 +112,8 @@ body {
 
 /* Animated gradients */
 @keyframes gradient-shift {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -110,13 +122,7 @@ body {
 }
 
 .animated-gradient {
-  background: linear-gradient(
-    45deg,
-    #ff6b35,
-    #f7931e,
-    #ff8c42,
-    #ff6b35
-  );
+  background: linear-gradient(45deg, #ff6b35, #f7931e, #ff8c42, #ff6b35);
   background-size: 300% 300%;
   animation: gradient-shift 6s ease infinite;
 }
@@ -164,17 +170,23 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Achievement badge animations */
 @keyframes badge-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.6), 0 0 30px rgba(247, 147, 30, 0.3);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.6),
+      0 0 30px rgba(247, 147, 30, 0.3);
   }
 }
 
@@ -229,7 +241,8 @@ body {
 
 /* Pulsing animation for important elements */
 @keyframes pulse-warm {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -244,9 +257,16 @@ body {
 /* Responsive design helpers */
 @media (max-width: 768px) {
   .gradient-bg {
-    background: 
-      radial-gradient(circle at 50% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 60%),
-      radial-gradient(circle at 50% 80%, rgba(247, 147, 30, 0.1) 0%, transparent 60%),
+    background: radial-gradient(
+        circle at 50% 20%,
+        rgba(255, 107, 53, 0.1) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 50% 80%,
+        rgba(247, 147, 30, 0.1) 0%,
+        transparent 60%
+      ),
       #000000;
   }
 }
