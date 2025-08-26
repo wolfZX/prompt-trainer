@@ -40,7 +40,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto space-y-6">
+    <div className="w-full element-spacing">
       {/* Header */}
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-bold text-white text-glow">
@@ -59,7 +59,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
             <button
               key={category.key}
               onClick={() => setSelectedCategory(category.key as PromptCategory | 'all')}
-              className={`btn-hover px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+              className={`btn-hover btn rounded-lg font-medium transition-all duration-200 ${
                 selectedCategory === category.key
                   ? 'bg-gradient-to-r from-primary to-secondary text-white warm-glow'
                   : 'glass text-gray-300 hover:text-white'
@@ -88,7 +88,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
             <div className="grid gap-4">
               {/* Poor Example */}
               <div className="border border-red-500/30 rounded-lg overflow-hidden">
-                <div className="bg-red-500/10 px-4 py-2 flex items-center justify-between">
+                <div className="bg-red-500/10 btn flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <span className="text-red-400">❌</span>
                     <span className="font-medium text-red-300">Poor Example</span>
@@ -117,7 +117,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
 
               {/* Good Example */}
               <div className="border border-emerald-500/30 rounded-lg overflow-hidden">
-                <div className="bg-emerald-500/10 px-4 py-2 flex items-center justify-between">
+                <div className="bg-emerald-500/10 btn flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <span className="text-emerald-400">✅</span>
                     <span className="font-medium text-emerald-300">Improved Example</span>
@@ -145,7 +145,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
                   {/* Try This Button */}
                   <button
                     onClick={() => handleExampleSelect(example.goodExample.prompt)}
-                    className="mt-3 w-full btn-hover px-4 py-2 bg-gradient-to-r from-primary to-secondary 
+                    className="mt-3 w-full btn-hover btn bg-gradient-to-r from-primary to-secondary 
                              text-white font-medium rounded-lg text-sm"
                   >
                     Try This Prompt
@@ -180,7 +180,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
             {/* Action Button */}
             <button
               onClick={() => setSelectedExample(example)}
-              className="w-full btn-hover px-4 py-2 glass border border-primary/30 
+              className="w-full btn-hover btn glass border border-primary/30 
                        text-primary hover:bg-primary/10 font-medium rounded-lg"
             >
               View Detailed Analysis
@@ -221,7 +221,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
               <div className="grid md:grid-cols-2 ga">
                 {/* Poor Example Detail */}
                 <div className="border border-red-500/30 rounded-lg overflow-hidden">
-                  <div className="bg-red-500/10 px-4 py-3">
+                  <div className="bg-red-500/10 btn">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <span className="text-red-400">❌</span>
@@ -252,7 +252,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
 
                 {/* Good Example Detail */}
                 <div className="border border-emerald-500/30 rounded-lg overflow-hidden">
-                  <div className="bg-emerald-500/10 px-4 py-3">
+                  <div className="bg-emerald-500/10 btn">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <span className="text-emerald-400">✅</span>
@@ -311,7 +311,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
                     handleExampleSelect(selectedExample.poorExample.prompt);
                     setSelectedExample(null);
                   }}
-                  className="flex-1 btn-hover px-6 py-3 border border-red-500/30 text-red-400 
+                  className="flex-1 btn-hover btn border border-red-500/30 text-red-400 
                            hover:bg-red-500/10 font-medium rounded-lg"
                 >
                   Try Poor Example
@@ -321,7 +321,7 @@ export default function ExamplesShowcase({ onExampleSelect }: ExamplesShowcasePr
                     handleExampleSelect(selectedExample.goodExample.prompt);
                     setSelectedExample(null);
                   }}
-                  className="flex-1 btn-hover px-6 py-3 bg-gradient-to-r from-primary to-secondary 
+                  className="flex-1 btn-hover btn bg-gradient-to-r from-primary to-secondary 
                            text-white font-medium rounded-lg"
                 >
                   Try Good Example

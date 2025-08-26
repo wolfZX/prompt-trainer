@@ -59,8 +59,9 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-8">
-      <div className="max-w-md w-full space-y-8">
+    <div className="min-h-screen flex items-center justify-center py-8">
+      <div className="content-container">
+        <div className="max-w-md w-full mx-auto element-spacing">
         {/* Header */}
         <div className="text-center">
           <div className="text-4xl mb-4">🎯</div>
@@ -152,7 +153,7 @@ export default function AuthPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full btn-hover py-3 px-4 bg-gradient-to-r from-primary to-secondary 
+              className="w-full btn-hover btn bg-gradient-to-r from-primary to-secondary 
                        text-white font-semibold rounded-lg disabled:opacity-50 
                        disabled:cursor-not-allowed disabled:transform-none"
             >
@@ -221,6 +222,7 @@ export default function AuthPage() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -251,6 +251,51 @@ body {
   }
 }
 
+/* Layout utilities */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Spacing utilities */
+.section-spacing {
+  margin-bottom: 2rem;
+}
+
+.element-spacing > * + * {
+  margin-top: 1.5rem;
+}
+
+.card-spacing {
+  margin-bottom: 1.5rem;
+}
+
+/* Button styling */
+.btn {
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+}
+
 /* Dark mode utilities */
 .dark {
   color-scheme: dark;
